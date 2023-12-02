@@ -5,10 +5,10 @@ import functools
 
 def main():
     all_games = get_input()
-    print(sum(map(calculate_power, all_games)))
+    print(sum(map(calculate_game_power, all_games)))
 
 
-def calculate_power(game_round: Game) -> int:
+def calculate_game_power(game: Game) -> int:
     def reduce_rounds(round1: Round, round2: Round):
         return Round(
             red=max(round1.red, round2.red),
@@ -16,7 +16,7 @@ def calculate_power(game_round: Game) -> int:
             blue=max(round1.blue, round2.blue),
         )
 
-    maximal_round = functools.reduce(reduce_rounds, game_round.rounds)
+    maximal_round = functools.reduce(reduce_rounds, game.rounds)
     return functools.reduce(operator.mul, maximal_round)
 
 
