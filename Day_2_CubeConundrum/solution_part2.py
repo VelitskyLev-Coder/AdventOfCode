@@ -17,6 +17,7 @@ def calculate_game_power(game: Game) -> int:
         )
 
     maximal_round = functools.reduce(reduce_rounds, game.rounds)
+    # noinspection PyTypeChecker
     return functools.reduce(operator.mul, maximal_round)
 
 
