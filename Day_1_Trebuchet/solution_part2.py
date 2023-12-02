@@ -1,5 +1,5 @@
 from typing import Iterable
-from Solution_part1 import get_input
+from solution_part1 import get_input
 import re
 
 

@@ -1,5 +1,5 @@
 import operator
-from Solution_part1 import Game, Round, get_input
+from solution_part1 import Game, Round, get_input
 import functools
 
 
