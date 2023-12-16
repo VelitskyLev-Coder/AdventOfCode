@@ -54,7 +54,7 @@ def propagate_lite(cur_direction: Direction, row: int, column: int, layout: list
         propagate_lite(new_direction, new_row, new_column, layout, heat_map_per_direction)
 
 
-def calculate_energized_tiles_count(layout, row, column, direction):
+def calculate_energized_tiles_number(layout, row, column, direction):
     heat_map_per_direction = {direction: [[False for _ in row] for row in layout] for direction in Direction}
     sys.setrecursionlimit(len(layout) * len(layout[0])*2)
     propagate_lite(direction, row, column, layout, heat_map_per_direction)
@@ -73,7 +73,7 @@ def calculate_energized_tiles_count(layout, row, column, direction):
 
 def main():
     layout = get_input()
-    result = calculate_energized_tiles_count(layout, 0, 0, Direction.RIGHT)
+    result = calculate_energized_tiles_number(layout, 0, 0, Direction.RIGHT)
     print(result)
 
 

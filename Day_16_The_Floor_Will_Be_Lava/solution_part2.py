@@ -1,4 +1,4 @@
-from solution_part1 import get_input, calculate_energized_tiles_count, Direction
+from solution_part1 import get_input, calculate_energized_tiles_number, Direction
 
 
 def main():
@@ -28,7 +28,7 @@ def main():
 
     possible_counts = []
     for row, column, direction in zip(configuration_row, configuration_column, configuration_direction):
-        possible_counts.append(calculate_energized_tiles_count(layout, row, column, direction))
+        possible_counts.append(calculate_energized_tiles_number(layout, row, column, direction))
 
     print(max(possible_counts))
 
