@@ -21,5 +21,7 @@ def main():
     steps = 75
     print(sum(count_how_many_after_steps(x, steps) for x in nums))
 
+    print(f"Cache size: {count_how_many_after_steps.cache_info().currsize}")
+
 if __name__ == '__main__':
     main()
