@@ -50,7 +50,6 @@ def main():
     #height = 7
     width = 101
     height = 103
-    os.makedirs('images', exist_ok=True)
     with open('output.txt', 'w') as f:
         for steps in tqdm(range(0, 10000)):
             grid = create_robots_grid(robots, width, height, steps)
